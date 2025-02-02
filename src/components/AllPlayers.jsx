@@ -35,8 +35,8 @@ function AllPlayers() {
                 <SearchForm setPlayers= {setPlayers} />
             </div>
             <div className="player_content">
-                {
-                    players.map((player)=>{
+                {!players && <p>The player list is empty!</p>}
+                {players && players.map((player)=>{
                         return (
                             <div key={player.id} className="player_card">
                                 <img src={player.imageUrl} alt={player.name} />
